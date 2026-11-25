@@ -1,0 +1,50 @@
+schema_version: 1
+type: reusable_template
+id: joomla-plugininfo-field
+title: WebTolk Joomla Plugininfo field
+kind: scaffold
+version: 1.0.0
+description: Copy-adapt WebTolk form field that renders the installed Joomla plugin version and translated description in its administrator settings.
+inputs:
+- id: namespace
+  required: true
+- id: target-file
+  required: false
+- id: extension-name
+  required: false
+outputs:
+- path: src/Fields/PlugininfoField.php
+files:
+- source: files/PlugininfoField.php
+  target: src/Fields/PlugininfoField.php
+prompts:
+- path: prompts/adaptation-notes.md
+tags:
+- joomla
+- php
+- field
+- source-file-template
+adaptation_required: true
+usage_policy:
+  read_readme_first: true
+  replace_namespace_before_commit: true
+  do_not_leave_donor_namespace: true
+update_sites:
+  - id: webtolk-github
+    enabled: true
+    channel: stable
+    manifest_url: https://github.com/WebTolk/pf-template-webtolk-joomla-plugininfo-field/releases/latest/download/update-manifest.json
+    changelog_url: https://github.com/WebTolk/pf-template-webtolk-joomla-plugininfo-field/blob/main/CHANGELOG.md
+    trust:
+      require_https: true
+      require_sha256: true
+      allow_unsigned: true
+      signature_required: false
+    policy:
+      check_interval_hours: 24
+      auto_check: true
+      auto_stage: false
+      auto_apply: false
+      notify_operator: true
+      backup_before_apply: true
+      install_path: '${PF_TEMPLATES}/joomla-plugininfo-field'
