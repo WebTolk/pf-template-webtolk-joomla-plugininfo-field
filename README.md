@@ -8,7 +8,7 @@ This ProcessForge template package provides the WebTolk-branded `plugininfo` fie
 
 Copy `files/PlugininfoField.php` into the plugin's field namespace, for example `src/Fields/PlugininfoField.php`. Replace the namespace placeholder and register the field in the existing administrator form with `type="plugininfo"` and the matching `addfieldprefix`.
 
-The form supplies `folder` and `element`. The field uses them to read the installed manifest and looks up `PLG_<ELEMENT>_DESC`. Adapt the translation lookup when the target plugin uses a different key. [Adaptation steps](prompts/adaptation-notes.md)
+The form supplies `folder` and `element`. The field uses them to read the installed manifest and looks up `PLG_<ELEMENT>_DESC`. When the target language prefix contains `{group}`, include the group from `$folder` as well as `$element` in the class's translation key. [Adaptation steps](prompts/adaptation-notes.md)
 
 ## Install into ProcessForge
 

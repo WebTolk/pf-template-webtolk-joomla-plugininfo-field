@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.1
+
+- Documented how the field builds translation keys that include the plugin group.
+
 ## 1.0.0
 
 - Released the WebTolk Plugininfo field as an installable ProcessForge template package.

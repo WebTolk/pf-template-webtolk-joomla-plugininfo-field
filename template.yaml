@@ -3,7 +3,7 @@ type: reusable_template
 id: joomla-plugininfo-field
 title: WebTolk Joomla Plugininfo field
 kind: scaffold
-version: 1.0.0
+version: 1.0.1
 description: Copy-adapt WebTolk form field that renders the installed Joomla plugin version and translated description in its administrator settings.
 inputs:
 - id: namespace
